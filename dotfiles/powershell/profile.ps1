@@ -31,7 +31,9 @@ Set-Alias out Out-String
 
 # Prompt configuration
 Set-Alias -Scope Global -Force "Set-PoshContext" -Value "Vlt-Prompt"
-oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\robbyrussel.omp.json | Invoke-Expression
+$env:POSH_GIT_ENABLED = $true
+
+oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\volatile.omp.json | Invoke-Expression
 
 
 winfetch
