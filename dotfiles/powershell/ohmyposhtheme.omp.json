@@ -1,0 +1,36 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "foreground": "lightBlue",
+          "properties": {
+            "template": "{{ .Env.VLTPROMPT }}"
+          },
+          "style": "plain",
+          "type": "text"
+        },
+        {
+          "foreground": "lightMagenta",
+          "properties": {
+            "template": " {{ .Status }}"
+          },
+          "style": "plain",
+          "type": "poshgit"
+        },
+        {
+          "foreground": "lightWhite",
+          "properties": {
+            "template": " \u276f "
+          },
+          "style": "plain",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 1
+}
