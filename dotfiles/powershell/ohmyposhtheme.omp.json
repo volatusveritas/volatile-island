@@ -13,7 +13,6 @@
           "type": "text"
         },
         {
-          "foreground": "lightMagenta",
           "properties": {
             "template": " {{ .Status }}"
           },
@@ -23,7 +22,7 @@
         {
           "foreground": "lightWhite",
           "properties": {
-            "template": " \u276f "
+            "template": " \u276F "
           },
           "style": "plain",
           "type": "text"
