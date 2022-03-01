@@ -18,7 +18,7 @@ function Vlt-Prompt
 		if (-Not $parent.EndsWith("\")) { $parent += "\" }
 	}
 	
-	$env:VLTPROMPT = "${drive}: $parent$current"
+	$env:VLTPROMPT = " ${drive}:  $parent$current"
 }
 
 
@@ -30,8 +30,10 @@ Set-Alias out Out-String
 
 
 # Prompt configuration
-Set-Alias -Scope Global -Force "Set-PoshContext" -Value "Vlt-Prompt"
+Set-Alias -Scope Global -Force -Name "Set-PoshContext" -Value "Vlt-Prompt"
 $env:POSH_GIT_ENABLED = $true
+$GitPromptSettings.BeforeStatus.Text = "`e[96m `e[39m"
+$GitPromptSettings.AfterStatus.Text = ""
 
 oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\volatile.omp.json | Invoke-Expression
 
