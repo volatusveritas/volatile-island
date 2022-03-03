@@ -1,5 +1,8 @@
 # Modules and packages
 Import-Module posh-git
+Import-Module Terminal-Icons
+Import-Module z
+Import-Module PSReadLine
 
 
 # Functions
@@ -36,6 +39,11 @@ $GitPromptSettings.BeforeStatus.Text = "`e[96m `e[39m"
 $GitPromptSettings.AfterStatus.Text = ""
 
 oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\themes\volatile.omp.json | Invoke-Expression
+
+
+# PSReadLine
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -BellStyle None
 
 
 winfetch
