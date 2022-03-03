@@ -73,6 +73,7 @@ set relativenumber         " relative line distance to current line is displayed
 
 " " Special settings
 colorscheme gruvbox
+highlight Normal guibg=NONE ctermbg=NONE
 filetype plugin on
 
 
