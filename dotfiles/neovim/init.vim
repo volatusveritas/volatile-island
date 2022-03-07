@@ -19,9 +19,10 @@ Plug 'folke/zen-mode.nvim'
 Plug 'folke/twilight.nvim'
 Plug 'andweeb/presence.nvim'
 Plug 'vimwiki/vimwiki'
-Plug 'ap/vim-css-color'
+Plug 'chrisbra/Colorizer'
 Plug 'tpope/vim-fugitive'
 Plug 'takac/vim-hardtime'
+Plug 'dcampos/nvim-snippy'
 call plug#end()
 
 
@@ -46,6 +47,8 @@ let g:indent_blankline_use_treesitter = v:true
 let g:indent_blankline_show_current_context = v:true
 
 let g:presence_main_image = "neovim"
+
+let g:colorizer_auto_filetype='css,html'
 
 
 " Option settings
@@ -106,3 +109,11 @@ endfunction
 
 " Use <C-j> for both expand and jump (make expand higher priority)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+
+" NvimSnippy
+imap <expr> <Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
+imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
+smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+xmap <Tab> <Plug>(snippy-cut-text)
