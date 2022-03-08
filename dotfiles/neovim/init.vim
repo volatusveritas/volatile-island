@@ -23,6 +23,7 @@ Plug 'chrisbra/Colorizer'
 Plug 'tpope/vim-fugitive'
 Plug 'takac/vim-hardtime'
 Plug 'dcampos/nvim-snippy'
+Plug 'klen/nvim-config-local'
 call plug#end()
 
 
