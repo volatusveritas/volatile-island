@@ -36,6 +36,7 @@ lua << EOF
     require'todo-comments'.setup()
     require'zen-mode'.setup()
     require'twilight'.setup()
+    require'config-local'.setup()
 EOF
 
 
