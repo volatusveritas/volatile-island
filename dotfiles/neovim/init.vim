@@ -2,8 +2,10 @@ call plug#begin()  " Begin plugin list definition
 
 "[Reason] Gruvbox is one of the best and cleanest themes for coding
 "applications. Doesn't stress the eye, and the colors work very well together
-"and are pretty in general.
-Plug 'morhetz/gruvbox'
+"and are pretty in general. I use it consistently throughout multiple projects,
+"editors and software in general, so the colors become predictable and
+"familiar, resulting in their meaning being easily identifiable.
+    Plug 'morhetz/gruvbox'
 "[Extra] In some cases, you don't need to have gruvbox in (neo)vim, because the
 "colors are managed by the terminal; in these cases, a terminal theme can be
 "used instead to achieve the same result, often times in a cleaner manner.
@@ -11,41 +13,56 @@ Plug 'morhetz/gruvbox'
 "[Reason] Treesitter makes syntax highlighting at least twice as good for most
 "if not all syntaxes and languages I've managed to use it with so far. Instead
 "of just highlighting special keywords and such, it attributes a special color
-"for identifiers, function names and things like that.
-Plug 'nvim-treesitter/nvim-treesitter'
+"to identifiers, function names and things like that, making coding a much
+"easier task.
+    Plug 'nvim-treesitter/nvim-treesitter'
 
 "[Reason] Very nice autocompletion plugin for vim in general. Easy to map keys
 "into its special functions, makes exploring code extremely easy with the <jump
-"to definition> and <get references> functions. Supports many languages.
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"to definition> and <get references> functions. Supports many languages. It's
+"especially useful in big files where I need to be jumping around all the time,
+"in which case I can simply 'jump to definition' and use <C-o> to go back to
+"where I was.
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "[Extra] It seems to have way too many features and I don't know most of them,
-"so I'm most probably not using it as well as I possibly could.
+"so I'm most probably not using it as well as I possibly could. I also lacks
+"support for some languages, and some of the languages it supports lack
+"important features, rendering it mostly useless in these cases.
 
 "[Reason] Much easier to understand nesting context with indentation lines and
-"guides.
-Plug 'lukas-reineke/indent-blankline.nvim'
+"guides. It can also be a guide for complexity, because if you see too many
+"indentation lines it probably means you're making a god function/class. It's
+"also easy to tweak and customize.
+    Plug 'lukas-reineke/indent-blankline.nvim'
 "[Extra] It acts a bit strange with syntaxes that lack explicit delimiters,
-"like Python and GDScript.
+"like Python and GDScript, which generally results in it not generating
+"indentation lines at all or just generating them forever until another scope
+"starts.
 
 "[Reason] Being able to quickly (un)comment a fraction of the code is an
 "extremely useful ability, especially for testing and debugging in some
-"specific cases.
-Plug 'tpope/vim-commentary'
+"specific cases. Commands like `gcgc` also make it easy to uncomment a bunch of
+"lines without having to manually select them.
+    Plug 'tpope/vim-commentary'
 "[Extra] This is a must for any source code editor, and it's a shame (neo)vim
-"doesn't ship with it natively.
+"doesn't ship with it natively. Still, Tim Pope did a nice job with this one.
 
 "[Reason] Nice for surrounding elements with symbols (markup tags especially).
 "Most of the mappings feel natural to use and make sense so it goes well with
-"(neo)vim's overall style.
-Plug 'tpope/vim-surround'
-"[Extra] It's still faster for me to manually surround elements sometimes. The
-"most probable reason is I haven't got used to the mappings yet (some of them
-"don't make much sense to me and I'm bad at memorizing already).
+"(neo)vim's overall style. It's extremely simple to turn something into a
+"argument for a function call, place code inside brackets as a function body,
+"and edit surrounded text in general.
+    Plug 'tpope/vim-surround'
+"[Extra] Some of the commands can be a bit confusing especially because they
+"conflict somewhat with existing shortcuts and commands, like how you have to
+"use capital S instead of s to surround in Visual mode. It takes a bit of
+"getting used to, but it's totally worth it in the end.
 
 "[Reason] The two following plugins alter the status line below the currently
 "edited window. I like how much information it's able to show without making it
 "overcrowded with text. One other thing I love about it is how it works out of
-"the box.
+"the box, and from the GitHub page's Wiki, it seems to be extremely
+"customizable and configurable.
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "[Extra] I've explored some statusline plugins, like powerline, and I don't
@@ -53,32 +70,92 @@ Plug 'vim-airline/vim-airline-themes'
 "believe there's still much to learn about it, and I plan on making my own
 "theme for it in the future. Airline-themes is necessary to use a
 "gruvbox-compatible theme for the statusline's colors. That's my workaround for
-"now, until I actually make a gruvbox theme.
+"now, until I actually make a gruvbox theme. It also impacts performance a bit
+"but it's nothing big enough to be an actual concern.
 
 "[Reason] Nvim-tree is great to explore files inside (neo)vim, and I'd even go
 "as for as to say it's much better than the native file explorer that comes
 "packed with the standard install. The mappings make sense and are pretty
-"useful. It's easy to set up as well. Mapping <C-n> to toggle it was genius.
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua'
+"useful. It's easy to set up as well.
+    Plug 'kyazdani42/nvim-web-devicons'
+    Plug 'kyazdani42/nvim-tree.lua'
 "[Extra] Web-devicons is necessary to show the special folder/programming
-"language/special icon for the tree explorer. I'm not sure Nerd font icons are
-"enough to make this unnecessary, though.
+"language/icon for the tree explorer. I'm not sure if Nerd font icons are
+"enough to make this unnecessary, though. <C-n> is mapped to toggle the tree. I
+"got this tip from docs, and it's absolutely genious.
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+"[Reason] FzF is a great command-line fuzzy finder. Making it accessible from
+"(neo)vim makes it pure gold. I expect my personal and non personal projects
+"alike to increase in size and complexity very soon, and even more in the
+"future, hence the usefulness of this plugin will probably increase over time.
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
+"[Extra] fzf.vim is the way to use fzf inside vim (fzf is not originally a vim
+"plugin), so the two walk alongside each other.
 
-Plug 'nvim-lua/plenary.nvim'
-Plug 'folke/todo-comments.nvim'
-Plug 'folke/zen-mode.nvim'
-Plug 'folke/twilight.nvim'
-Plug 'andweeb/presence.nvim'
-Plug 'vimwiki/vimwiki'
-Plug 'chrisbra/Colorizer'
-Plug 'tpope/vim-fugitive'
-Plug 'takac/vim-hardtime'
-Plug 'dcampos/nvim-snippy'
-Plug 'klen/nvim-config-local'
+"[Reason] Plenary is a collection of useful neovim functions which other
+"plugins either rely on or make use of.
+    Plug 'nvim-lua/plenary.nvim'
+"[Extra] Keeping plenary updated alongside its dependants is uf utmost
+"importance, because newer versions of other plugins may use new functions from
+"plenary, and if it's not updated, things will break.
+
+"[Reason] Todo comments (and comment marks in general) are a simply but quite
+"effective way of annotating code with marks that can be later jumped to or
+"searched for (the `TodoQuickFix` command is glorious, by the way).
+    Plug 'folke/todo-comments.nvim'
+
+"[Reason] The two following plugins complement each other. Zen-mode is used to
+"bring one of the opened windows to focus and make it easier to concentrate on
+"editing a specific file (hence the name zen-mode). Twilight, in addition, dims
+"parts of the code it doesn't find belong to the group of lines being edited
+"currently, making for a great experience.
+    Plug 'folke/zen-mode.nvim'
+    Plug 'folke/twilight.nvim'
+"[Extra] <C-z> is mapped to toggle zen mode in the file being edited currently,
+"and I'm still getting used to this mapping as it's something so significantly
+"different in other editors.
+
+"[Reason] Shows people on Discord if I'm editing some file, in which project
+"I'm doing so, what file I'm editing and for how long I've been doing it. This
+"has two use cases: a) most people won't send me messages because they know I'm
+"busy, and the ones that do send messages expect to not be answered instantly.
+    Plug 'andweeb/presence.nvim'
+"[Extra] There's more to tweak than I've messed with, but I don't think
+"additional setup is necessary, at least for now.
+
+"[Reason] I had used vim-notes before, but vimwiki is just packed with
+"usefulness everywhere. Very nice plugin, easy to set up and use, but takes a
+"little getting used to with its more specific and intimate syntax.
+    Plug 'vimwiki/vimwiki'
+
+"[Reason] Seeing the colors from color codes is a blessing whenever I have to
+"edit things using many colors, because it becomes hard to keep track of which
+"color is which and which do and don't go well together.
+    Plug 'chrisbra/Colorizer'
+
+"[Reason] It allows me to use Git commands from within Vim, and that's reason
+"enough to use it, but it also has additional features for Git manipulation
+"that simply compose a great plugin.
+    Plug 'tpope/vim-fugitive'
+
+"[Reason] Vim-hardtime is probably the best way to get rid of improductive
+"vices in editing by forcing you to do it the right way, and edit consistently
+"instead of spamming edits/deletions/changes and banging the movement keys
+"instead of abusing Vim's atomicity and using counts instead.
+    Plug 'takac/vim-hardtime'
+
+"[Reason] Snippy is a great and simple snippets plugin, easy to customize, set
+"up and use. I expect it to become especially useful once I go into the
+"territory of editing Battle for Wesnoth files.
+    Plug 'dcampos/nvim-snippy'
+
+"[Reason] (Neo)vim has support for loading local vimrcs upon start but
+"everywhere I go I read it's unsafe to do so because the contents of said vimrc
+"could be damaging. I'm not sure this is extremely useful but it seems a better
+"alternative to the native local vimrc loading.
+    Plug 'klen/nvim-config-local'
+
 call plug#end()  " End plugin list definition
 
 
