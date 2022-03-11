@@ -156,6 +156,12 @@ Plug 'vim-airline/vim-airline-themes'
 "alternative to the native local vimrc loading.
     Plug 'klen/nvim-config-local'
 
+Plug 'tpope/vim-repeat'
+
+Plug 'folke/which-key.nvim'
+
+Plug 'ggandor/lightspeed.nvim'
+
 call plug#end()  " End plugin list definition
 
 
@@ -169,6 +175,7 @@ lua << EOF
     require'zen-mode'.setup()
     require'twilight'.setup()
     require'config-local'.setup()
+    require'which-key'.setup()
 EOF
 
 
