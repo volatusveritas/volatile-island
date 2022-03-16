@@ -162,6 +162,8 @@ Plug 'folke/which-key.nvim'
 
 Plug 'ggandor/lightspeed.nvim'
 
+Plug 'puremourning/vimspector'
+
 call plug#end()  " End plugin list definition
 
 
@@ -190,6 +192,8 @@ let g:indent_blankline_show_current_context = v:true
 let g:presence_main_image = "neovim"
 
 let g:colorizer_auto_filetype='css,html'
+
+let g:vimspector_enable_mappings = 'HUMAN'
 
 
 " Option settings
