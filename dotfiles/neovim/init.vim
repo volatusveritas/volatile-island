@@ -164,6 +164,8 @@ Plug 'ggandor/lightspeed.nvim'
 
 Plug 'puremourning/vimspector'
 
+Plug 'romgrk/barbar.nvim'
+
 call plug#end()  " End plugin list definition
 
 
@@ -171,7 +173,6 @@ call plug#end()  " End plugin list definition
 lua << EOF
     require'nvim-treesitter.install'.compilers = { "clang" }
     require'nvim-treesitter.configs'.setup { highlight = { enable = true } }
-    require'nvim-tree'.setup()
     require'nvim-tree'.setup { auto_close = true, indent_markers = 1 }
     require'todo-comments'.setup()
     require'zen-mode'.setup()
@@ -239,7 +240,8 @@ set relativenumber
 
 " " Special settings
 colorscheme gruvbox
-highlight Normal guibg=NONE ctermbg=NONE
+" Make background transparent
+" " highlight Normal guibg=NONE ctermbg=NONE
 filetype plugin on
 
 
@@ -254,6 +256,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gr <Plug>(coc-references)
 nmap <leader>rn <Plug>(coc-rename)
 map <C-z> :ZenMode<CR>
+
 
 
 " TEMPORARY (COC CONFIG EXPLICIT)
@@ -280,3 +283,40 @@ imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
 smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
 smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
 xmap <Tab> <Plug>(snippy-cut-text)
+
+
+" BarBar
+" Move to previous/next
+nnoremap <silent>    <A-,> :BufferPrevious<CR>
+nnoremap <silent>    <A-.> :BufferNext<CR>
+" Re-order to previous/next
+nnoremap <silent>    <A-<> :BufferMovePrevious<CR>
+nnoremap <silent>    <A->> :BufferMoveNext<CR>
+" Goto buffer in position...
+nnoremap <silent>    <A-1> :BufferGoto 1<CR>
+nnoremap <silent>    <A-2> :BufferGoto 2<CR>
+nnoremap <silent>    <A-3> :BufferGoto 3<CR>
+nnoremap <silent>    <A-4> :BufferGoto 4<CR>
+nnoremap <silent>    <A-5> :BufferGoto 5<CR>
+nnoremap <silent>    <A-6> :BufferGoto 6<CR>
+nnoremap <silent>    <A-7> :BufferGoto 7<CR>
+nnoremap <silent>    <A-8> :BufferGoto 8<CR>
+nnoremap <silent>    <A-9> :BufferLast<CR>
+" Pin/unpin buffer
+nnoremap <silent>    <A-p> :BufferPin<CR>
+" Close buffer
+nnoremap <silent>    <A-c> :BufferClose<CR>
+" Wipeout buffer
+"                          :BufferWipeout<CR>
+" Close commands
+"                          :BufferCloseAllButCurrent<CR>
+"                          :BufferCloseAllButPinned<CR>
+"                          :BufferCloseBuffersLeft<CR>
+"                          :BufferCloseBuffersRight<CR>
+" Magic buffer-picking mode
+nnoremap <silent> <C-s>    :BufferPick<CR>
+" Sort automatically by...
+nnoremap <silent> <Space>bb :BufferOrderByBufferNumber<CR>
+nnoremap <silent> <Space>bd :BufferOrderByDirectory<CR>
+nnoremap <silent> <Space>bl :BufferOrderByLanguage<CR>
+nnoremap <silent> <Space>bw :BufferOrderByWindowNumber<CR>
