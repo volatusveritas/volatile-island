@@ -44,6 +44,3 @@ oh-my-posh --init --shell pwsh --config ~\AppData\Local\Programs\oh-my-posh\them
 # PSReadLine
 Set-PSReadLineOption -PredictionSource History
 Set-PSReadLineOption -BellStyle None
-
-
-winfetch
