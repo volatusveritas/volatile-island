@@ -1,0 +1,385 @@
+
+
+times in msec
+ clock   self+sourced   self:  sourced script
+ clock   elapsed:              other lines
+
+000.047  000.047: --- NVIM STARTING ---
+000.237  000.190: event init
+000.487  000.249: early init
+027.209  026.723: locale set
+027.306  000.096: init first window
+028.462  001.157: inits 1
+028.598  000.136: window checked
+028.623  000.025: parsing arguments
+030.406  000.510  000.510: require('vim.shared')
+031.805  000.686  000.686: require('vim._meta')
+031.827  001.397  000.712: require('vim._editor')
+031.837  002.097  000.190: require('vim._init_packages')
+031.858  001.138: init lua interpreter
+032.031  000.172: expanding arguments
+032.115  000.085: inits 2
+033.380  001.265: init highlight
+033.395  000.015: waiting for UI
+042.200  008.805: done waiting for UI
+042.246  000.047: init screen for UI
+042.909  000.663: init default mappings
+042.969  000.059: init default autocommands
+057.987  000.279  000.279: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\ftplugin.vim
+060.442  000.209  000.209: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\indent.vim
+069.842  003.172  003.172: require('packer.util')
+070.025  007.993  004.821: require('packer')
+073.413  003.372  003.372: require('packer.log')
+078.462  002.000  002.000: require('packer.async')
+082.583  002.120  002.120: require('packer.result')
+082.613  004.126  002.006: require('packer.jobs')
+082.630  009.018  002.892: require('packer.plugin_utils')
+084.648  001.841  001.841: require('packer.snapshot')
+085.858  024.361  002.137: sourcing C:\Users\LUCAS\AppData\Local/nvim/init/plug.lua
+086.893  000.315  000.315: sourcing C:\Users\LUCAS\AppData\Local/nvim/init/plugins.lua
+092.766  000.122  000.122: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\coq_nvim\ftdetect\coq-snip.vim
+094.321  000.147  000.147: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-snippy\ftdetect\snippets.vim
+095.591  000.095  000.095: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-fugitive\ftdetect\fugitive.vim
+098.381  007.259  006.894: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\filetype.lua
+098.922  000.095  000.095: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\filetype.vim
+101.556  000.153  000.153: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\ftplugin.vim
+101.731  014.298  006.791: sourcing C:\Users\LUCAS\AppData\Local/nvim/init/general.vim
+102.825  000.650  000.650: sourcing C:\Users\LUCAS\AppData\Local/nvim/init/mappings.vim
+103.053  041.987  002.364: sourcing C:\Users\LUCAS\AppData\Local\nvim\init.vim
+103.084  017.640: sourcing vimrc file(s)
+106.800  000.378  000.378: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\syntax\synload.vim
+122.272  018.532  018.154: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\syntax\syntax.vim
+138.469  000.980  000.980: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\gzip.vim
+139.028  000.121  000.121: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\health.vim
+139.755  000.256  000.256: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\man.vim
+144.006  000.930  000.930: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\pack\dist\opt\matchit\plugin\matchit.vim
+144.823  004.732  003.803: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\matchit.vim
+145.652  000.516  000.516: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\matchparen.vim
+147.431  001.431  001.431: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\netrwPlugin.vim
+148.835  000.085  000.085: sourcing C:\Users\LUCAS\AppData\Local\nvim-data/rplugin.vim
+148.881  001.045  000.960: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\rplugin.vim
+149.537  000.373  000.373: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\shada.vim
+150.040  000.130  000.130: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\spellfile.vim
+150.721  000.393  000.393: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\tarPlugin.vim
+151.398  000.337  000.337: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\tohtml.vim
+152.333  000.206  000.206: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\tutor.vim
+153.696  000.732  000.732: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\plugin\zipPlugin.vim
+185.522  002.735  002.735: require('tabby.module.filename')
+190.355  002.335  002.335: require('tabby.module.highlight')
+190.449  004.898  002.563: require('tabby.text')
+195.768  002.463  002.463: require('tabby.win')
+195.794  005.330  002.867: require('tabby.tab')
+197.168  017.059  004.096: require('tabby.presets')
+204.896  002.764  002.764: require('tabby.module.node')
+210.115  002.544  002.544: require('tabby.module.log')
+210.137  005.214  002.671: require('tabby.module.render')
+210.147  010.756  002.778: require('tabby.legacy.component')
+211.837  001.683  001.683: require('tabby.legacy.config')
+213.653  001.798  001.798: require('tabby.legacy.tabline')
+213.674  016.444  002.207: require('tabby')
+213.825  056.081  022.578: require('plugconfigs/tabby')
+224.833  004.569  004.569: require('zen-mode.util')
+225.102  007.354  002.785: require('zen-mode.config')
+227.621  002.505  002.505: require('zen-mode.plugins')
+227.649  012.049  002.190: require('zen-mode.view')
+227.668  013.831  001.781: require('zen-mode')
+234.511  002.283  002.283: require('todo-comments.util')
+234.608  004.827  002.545: require('todo-comments.config')
+234.621  006.831  002.004: require('todo-comments')
+240.240  003.535  003.535: require('colorizer/nvim')
+241.972  000.069  000.069: require('ffi')
+242.375  002.101  002.033: require('colorizer/trie')
+242.716  008.024  002.388: require('colorizer')
+265.580  001.301  001.301: require('nvim-tree.iterators.node-iterator')
+265.634  007.681  006.380: require('nvim-tree.utils')
+265.652  010.895  003.215: require('nvim-tree.events')
+270.512  001.776  001.776: require('nvim-tree.log')
+278.870  008.309  008.309: require('nvim-tree.git.utils')
+280.718  001.825  001.825: require('nvim-tree.git.runner')
+282.503  001.752  001.752: require('nvim-tree.watcher')
+282.537  015.674  002.011: require('nvim-tree.git')
+284.249  001.699  001.699: require('nvim-tree.explorer.watch')
+286.024  001.745  001.745: require('nvim-tree.explorer.common')
+290.536  002.369  002.369: require('nvim-tree.explorer.node-builders')
+292.356  001.793  001.793: require('nvim-tree.explorer.sorters')
+293.836  001.456  001.456: require('nvim-tree.explorer.filters')
+297.274  001.894  001.894: require('nvim-tree.view')
+297.306  003.450  001.556: require('nvim-tree.live-filter')
+297.319  011.249  002.181: require('nvim-tree.explorer.explore')
+298.851  001.522  001.522: require('nvim-tree.explorer.reload')
+298.875  033.214  001.325: require('nvim-tree.explorer')
+298.888  046.259  002.150: require('nvim-tree.core')
+300.776  001.878  001.878: require('nvim-tree.diagnostics')
+302.801  001.987  001.987: require('nvim-tree.renderer.components.padding')
+304.342  001.513  001.513: require('nvim-tree.renderer.components.icons')
+305.898  001.532  001.532: require('nvim-tree.renderer.components.full-name')
+307.664  001.741  001.741: require('nvim-tree.renderer.help')
+309.439  001.730  001.730: require('nvim-tree.renderer.components.git')
+310.875  001.415  001.415: require('nvim-tree.renderer.builder')
+312.306  001.412  001.412: require('nvim-tree.marks')
+312.335  062.669  003.202: require('nvim-tree.renderer')
+314.047  001.696  001.696: require('nvim-tree.actions.tree-modifiers.collapse-all')
+315.519  001.450  001.450: require('nvim-tree.actions.root.dir-up')
+317.297  001.748  001.748: require('nvim-tree.actions.root.change-dir')
+319.713  002.388  002.388: require('nvim-tree.actions.reloaders.reloaders')
+321.451  001.702  001.702: require('nvim-tree.actions.finders.find-file')
+321.492  073.475  001.823: require('nvim-tree.lib')
+323.290  001.785  001.785: require('nvim-tree.colors')
+325.216  001.895  001.895: require('nvim-tree.legacy')
+327.165  001.925  001.925: require('nvim-tree.actions.fs.copy-paste')
+330.028  001.395  001.395: require('nvim-tree.actions.tree-modifiers.expand-all')
+331.338  001.290  001.290: require('nvim-tree.actions.tree-modifiers.toggles')
+332.817  001.374  001.374: require('nvim-tree.actions.fs.create-file')
+334.199  001.362  001.362: require('nvim-tree.actions.fs.rename-file')
+335.856  001.627  001.627: require('nvim-tree.actions.fs.trash')
+337.466  001.578  001.578: require('nvim-tree.actions.fs.remove-file')
+339.432  001.937  001.937: require('nvim-tree.actions.moves.parent')
+341.149  001.682  001.682: require('nvim-tree.actions.moves.sibling')
+342.486  001.290  001.290: require('nvim-tree.actions.moves.item')
+343.774  001.255  001.255: require('nvim-tree.actions.finders.search-node')
+344.980  001.187  001.187: require('nvim-tree.actions.node.run-command')
+346.229  001.229  001.229: require('nvim-tree.actions.node.file-popup')
+347.545  001.297  001.297: require('nvim-tree.actions.node.system-open')
+348.773  001.209  001.209: require('nvim-tree.marks.bulk-move')
+348.794  021.597  001.885: require('nvim-tree.actions.dispatch')
+348.842  103.315  002.639: require('nvim-tree')
+350.340  000.553  000.553: require('vim.inspect')
+354.717  002.224  002.224: require('nvim-tree.actions')
+356.613  001.860  001.860: require('nvim-tree.actions.node.open-file')
+363.681  001.706  001.706: require('nvim-tree.marks.navigation')
+363.705  003.400  001.694: require('nvim-tree.api')
+363.752  005.145  001.745: require('nvim-tree.keymap')
+368.489  003.999  003.999: require('nvim-web-devicons')
+376.293  001.107  001.107: require('mason-core.path')
+376.338  002.137  001.029: require('mason.settings')
+378.939  000.699  000.699: require('mason-core.functional.data')
+378.962  001.695  000.996: require('mason-core.functional.function')
+379.096  002.748  001.053: require('mason-core.platform')
+379.106  006.104  001.219: require('mason')
+382.244  001.560  001.560: require('mason-core.functional')
+383.929  001.619  001.619: require('mason-core.functional.list')
+384.115  004.964  001.786: require('mason.api.command')
+393.368  001.700  001.700: require('nvim-treesitter.utils')
+403.330  002.513  002.513: require('vim.treesitter.language')
+403.384  005.122  002.608: require('vim.treesitter.query')
+406.028  002.630  002.630: require('vim.treesitter.languagetree')
+406.117  010.486  002.734: require('vim.treesitter')
+406.339  012.950  002.464: require('nvim-treesitter.parsers')
+414.413  001.449  001.449: require('nvim-treesitter.ts_utils')
+414.438  002.724  001.275: require('nvim-treesitter.tsrange')
+415.596  001.151  001.151: require('nvim-treesitter.caching')
+415.627  005.362  001.488: require('nvim-treesitter.query')
+415.653  007.402  002.039: require('nvim-treesitter.configs')
+415.664  009.314  001.912: require('nvim-treesitter.info')
+431.827  016.156  016.156: require('nvim-treesitter.shell_command_selectors')
+431.900  042.293  002.173: require('nvim-treesitter.install')
+628.342  244.208  201.915: require('plugconfigs/nvim-treesitter')
+639.541  002.921  002.921: require('which-key.util')
+639.582  005.624  002.703: require('which-key.tree')
+642.174  002.577  002.577: require('which-key.config')
+642.208  010.933  002.731: require('which-key.keys')
+642.226  013.856  002.923: require('which-key')
+644.380  000.679  000.679: require('kommentary.util')
+644.967  000.567  000.567: require('kommentary.callbacks')
+645.022  002.666  001.419: require('kommentary.config')
+648.995  000.459  000.459: require('catppuccin')
+649.520  000.501  000.501: require('catppuccin.config')
+657.316  000.642  000.642: require('catppuccin.lib.highlighter')
+660.614  001.113  001.113: require('catppuccin.lib.hsluv')
+660.754  002.338  001.224: require('catppuccin.utils.colors')
+660.866  002.947  000.609: require('catppuccin.lib.ui')
+660.978  003.546  000.599: require('catppuccin.lib.mapper')
+662.055  000.952  000.952: require('catppuccin.palettes')
+662.572  000.388  000.388: require('catppuccin.palettes.mocha')
+663.113  000.296  000.296: require('catppuccin.groups.properties')
+663.700  000.468  000.468: require('catppuccin.groups.syntax')
+664.471  000.525  000.525: require('catppuccin.groups.editor')
+665.231  000.543  000.543: require('catppuccin.groups.integrations.markdown')
+665.955  000.575  000.575: require('catppuccin.groups.integrations.cmp')
+666.632  000.538  000.538: require('catppuccin.groups.integrations.telescope')
+667.074  000.311  000.311: require('catppuccin.groups.integrations.nvimtree')
+667.489  000.300  000.300: require('catppuccin.groups.integrations.indent_blankline')
+668.009  000.355  000.355: require('catppuccin.groups.integrations.dashboard')
+668.624  000.481  000.481: require('catppuccin.groups.integrations.bufferline')
+669.675  000.874  000.874: require('catppuccin.groups.integrations.vimwiki')
+670.485  000.602  000.602: require('catppuccin.groups.integrations.telekasten')
+671.081  000.398  000.398: require('catppuccin.groups.integrations.symbols_outline')
+671.792  000.515  000.515: require('catppuccin.groups.integrations.beacon')
+672.437  000.454  000.454: require('catppuccin.groups.integrations.gitsigns')
+673.243  000.636  000.636: require('catppuccin.groups.integrations.treesitter')
+673.996  000.541  000.541: require('catppuccin.groups.integrations.notify')
+674.995  000.807  000.807: require('catppuccin.groups.integrations.native_lsp')
+675.776  000.487  000.487: require('catppuccin.groups.terminal')
+680.130  023.966  008.731: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\catppuccin\colors\catppuccin.lua
+682.342  037.188  012.262: require('plugconfigs/catppuccin')
+693.314  002.409  002.409: require('twilight.util')
+693.449  005.220  002.810: require('twilight.config')
+693.477  008.962  003.743: require('twilight.view')
+693.496  011.112  002.149: require('twilight')
+786.128  092.588  092.588: require('coq')
+788.031  000.207  000.207: require('vim.F')
+830.650  003.308  003.308: require('vim.lsp.log')
+833.886  003.212  003.212: require('vim.lsp.protocol')
+843.203  004.059  004.059: require('vim.lsp._snippet')
+848.468  005.238  005.238: require('vim.highlight')
+848.547  014.631  005.334: require('vim.lsp.util')
+848.605  024.612  003.461: require('vim.lsp.handlers')
+852.947  004.331  004.331: require('vim.lsp.rpc')
+867.243  014.240  014.240: require('vim.lsp.sync')
+876.779  009.275  009.275: require('vim.lsp.buf')
+880.360  003.541  003.541: require('vim.lsp.diagnostic')
+883.327  002.941  002.941: require('vim.lsp.codelens')
+883.606  066.726  007.787: require('vim.lsp')
+883.881  068.539  001.813: require('lspconfig.util')
+883.906  070.181  001.643: require('lspconfig.configs')
+883.922  093.946  023.765: require('lspconfig')
+884.320  094.585  000.639: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-lspconfig\plugin\lspconfig.vim
+926.385  001.185  001.185: require('mason-core.log')
+926.404  004.859  003.674: require('mason-lspconfig')
+928.626  002.214  002.214: require('mason-lspconfig.settings')
+931.460  002.803  002.803: require('mason-lspconfig.lspconfig_hook')
+934.445  002.939  002.939: require('mason-lspconfig.win-exepath-compat')
+938.993  001.101  001.101: require('mason-core.functional.table')
+939.141  004.630  003.529: require('mason-lspconfig.mappings.server')
+942.635  001.187  001.187: require('mason-core.async')
+943.353  000.694  000.694: require('mason-core.async.uv')
+943.378  003.039  001.157: require('mason-core.fs')
+944.037  000.651  000.651: require('mason-core.optional')
+944.700  000.645  000.645: require('mason-core.EventEmitter')
+945.576  000.858  000.858: require('mason-registry.index')
+945.624  006.468  001.275: require('mason-registry')
+947.671  002.035  002.035: require('mason-lspconfig.server_config_extensions')
+949.210  001.519  001.519: require('lspconfig.server_configurations.omnisharp')
+953.616  001.151  001.151: require('mason-core.notify')
+954.558  000.900  000.900: require('mason-core.functional.number')
+955.487  000.894  000.894: require('mason-core.functional.relation')
+956.652  001.131  001.131: require('mason-core.functional.logic')
+956.749  007.433  003.357: require('mason-lspconfig.api.command')
+958.310  001.548  001.548: require('lspconfig.server_configurations.clangd')
+966.661  001.127  001.127: require('lspconfig.server_configurations.cssls')
+984.033  001.334  001.334: require('lspconfig.server_configurations.gdscript')
+986.320  002.007  002.007: require('lspconfig.server_configurations.html')
+994.215  001.328  001.328: require('lspconfig.server_configurations.ltex')
+996.731  002.448  002.448: require('mason-lspconfig.server_configurations.ltex')
+998.734  001.141  001.141: require('lspconfig.server_configurations.powershell_es')
+1001.343  002.549  002.549: require('mason-lspconfig.server_configurations.powershell_es')
+1003.214  001.758  001.758: require('lspconfig.server_configurations.pylsp')
+1011.093  000.882  000.882: require('mason-core.result')
+1014.587  001.250  001.250: require('mason-core.process')
+1038.868  026.561  025.312: require('mason-core.spawn')
+1040.177  001.275  001.275: require('mason-core.receipt')
+1041.355  001.133  001.133: require('mason-core.functional.string')
+1041.433  030.318  001.348: require('mason-core.installer.context')
+1042.450  001.006  001.006: require('mason-core.installer.linker')
+1043.214  000.738  000.738: require('mason-core.async.control')
+1043.235  034.445  001.501: require('mason-core.installer')
+1043.322  036.342  001.897: require('mason-core.managers.pip3')
+1043.340  040.016  003.674: require('mason-lspconfig.server_configurations.pylsp')
+1045.867  001.484  001.484: require('lspconfig.server_configurations.tsserver')
+1052.869  001.977  001.977: require('lspconfig.server_configurations.sumneko_lua')
+1068.899  178.731  085.115: require('plugconfigs/lspconfig')
+1069.025  914.266  026.195: sourcing C:\Users\LUCAS\AppData\Local\nvim\plugin\packer_compiled.lua
+1071.642  024.505: loading rtp plugins
+1080.927  000.114  000.114: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\catppuccin\plugin\catppuccin.vim
+1082.924  000.062  000.062: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\coq.artifacts\plugin\coq.artifacts.vim
+1084.833  000.206  000.206: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\coq_nvim\plugin\coq.vim
+1088.902  001.846  001.846: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\FastFold\plugin\fastfold.vim
+1093.485  002.116  002.116: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\fzf\plugin\fzf.vim
+1098.430  003.325  003.325: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\fzf.vim\plugin\fzf.vim
+1104.099  001.164  001.164: require('indent_blankline/utils')
+1104.134  003.035  001.871: require('indent_blankline')
+1105.225  000.756  000.756: require('indent_blankline.commands')
+1105.637  004.944  001.154: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\indent-blankline.nvim\plugin\indent_blankline.vim
+1110.153  001.310  001.310: require('kommentary.kommentary')
+1110.199  002.220  000.910: require('kommentary')
+1111.125  003.249  001.029: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\kommentary\plugin\kommentary.vim
+1114.127  000.096  000.096: require('vim.keymap')
+1115.813  002.170  002.074: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\lightspeed.nvim\plugin\init.lua
+1118.767  000.419  000.419: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-colorizer.lua\plugin\colorizer.vim
+1121.304  000.101  000.101: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-lspconfig\plugin\lspconfig.vim
+1123.801  000.786  000.786: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-snippy\plugin\snippy.vim
+1129.719  001.347  001.347: require('nvim-treesitter.statusline')
+1131.294  001.554  001.554: require('nvim-treesitter.query_predicates')
+1131.320  004.112  001.211: require('nvim-treesitter')
+1140.711  005.229  005.229: require('vim.treesitter.highlighter')
+1140.784  007.645  002.416: require('nvim-treesitter.highlight')
+1141.231  014.364  002.606: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-treesitter\plugin\nvim-treesitter.lua
+1145.624  001.415  001.415: require('rainbow')
+1145.988  001.940  000.525: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-ts-rainbow\plugin\rainbow.vim
+1148.507  000.241  000.241: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\nvim-web-devicons\plugin\nvim-web-devicons.vim
+1152.832  000.650  000.650: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\plenary.nvim\plugin\plenary.vim
+1162.618  002.405  002.405: require('lib.log')
+1164.977  002.334  002.334: require('deps.msgpack')
+1168.220  003.220  003.220: require('deps.serpent')
+1171.400  003.119  003.119: require('presence.file_explorers')
+1174.880  003.435  003.435: require('presence.file_assets')
+1177.095  002.184  002.184: require('presence.plugin_managers')
+1181.387  001.882  001.882: require('deps.struct')
+1181.420  004.286  002.404: require('presence.discord')
+1181.447  025.703  004.721: require('presence')
+1184.517  000.186  000.186: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\presence.nvim\autoload\presence.vim
+1208.655  053.161  027.272: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\presence.nvim\plugin\presence.vim
+1211.356  000.186  000.186: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\tabby.nvim\plugin\tabby.vim
+1218.524  004.120  004.120: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\tagbar\plugin\tagbar.vim
+1221.078  000.329  000.329: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\todo-comments.nvim\plugin\todo.vim
+1223.583  000.344  000.344: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\twilight.nvim\plugin\twilight.vim
+1231.758  000.656  000.656: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\init.vim
+1236.971  001.388  001.388: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\parts.vim
+1239.993  000.179  000.179: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\formatter\short_path.vim
+1251.122  000.480  000.480: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\util.vim
+1251.399  025.957  023.252: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\plugin\airline.vim
+1254.277  000.333  000.333: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline-themes\plugin\airline-themes.vim
+1263.009  006.572  006.572: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-fugitive\plugin\fugitive.vim
+1333.819  000.899  000.899: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-hardtime\plugin\hardtime.vim
+1338.466  001.688  001.688: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-surround\plugin\surround.vim
+1414.716  002.106  002.106: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vimwiki\autoload\vimwiki\vars.vim
+1424.221  001.058  001.058: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vimwiki\autoload\vimwiki\u.vim
+1434.160  027.707  024.543: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vimwiki\plugin\vimwiki.vim
+1438.757  000.717  000.717: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\which-key.nvim\plugin\which-key.vim
+1442.683  000.647  000.647: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\zen-mode.nvim\plugin\zen-mode.vim
+1444.462  213.629: loading packages
+1444.496  000.034: loading after plugins
+1444.667  000.172: inits 3
+1465.581  020.914: reading ShaDa
+1479.684  003.316  003.316: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions.vim
+1482.690  000.654  000.654: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\quickfix.vim
+1487.036  001.197  001.197: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline.vim
+1491.144  000.536  000.536: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\netrw.vim
+1495.324  000.512  000.512: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\fzf.vim
+1501.664  000.683  000.683: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\section.vim
+1506.976  001.438  001.438: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\highlighter.vim
+1508.227  010.220  008.100: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\term.vim
+1512.226  000.631  000.631: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\tagbar.vim
+1516.352  001.109  001.109: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\branch.vim
+1521.041  000.821  000.821: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\fugitiveline.vim
+1525.049  000.653  000.653: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\nvimlsp.vim
+1528.580  000.743  000.743: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\whitespace.vim
+1539.466  000.766  000.766: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\po.vim
+1543.517  000.803  000.803: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\wordcount.vim
+1546.937  000.523  000.523: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\keymap.vim
+1554.261  000.673  000.673: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\searchcount.vim
+1681.109  000.826  000.826: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\themes.vim
+1683.054  006.605  005.779: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline-themes\autoload\airline\themes\onedark.vim
+1757.695  001.829  001.829: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline-themes\autoload\airline\themes\onedark.vim
+1820.054  001.374  001.374: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\builder.vim
+1825.136  000.763  000.763: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\vim-airline\autoload\airline\extensions\default.vim
+1900.947  401.637: opening buffers
+1901.263  000.316: BufEnter autocommands
+1901.280  000.017: editing files in windows
+1909.665  007.271  007.271: require('todo-comments.highlight')
+1913.338  003.211  003.211: require('which-key.plugins')
+1916.560  003.189  003.189: require('which-key.plugins.marks')
+1920.676  003.617  003.617: require('which-key.plugins.presets')
+1924.515  003.808  003.808: require('which-key.plugins.presets.misc')
+1928.265  003.686  003.686: require('which-key.plugins.registers')
+1931.498  003.018  003.018: require('which-key.colors')
+1971.290  042.209: VimEnter autocommands
+1971.309  000.019: UIEnter autocommands
+2087.835  113.554  113.554: sourcing C:\tools\neovim\nvim-win64\share\nvim\runtime\autoload\provider\clipboard.vim
+2088.471  003.608: before starting main loop
+2107.655  009.605  009.605: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\tagbar\autoload\tagbar.vim
+2111.557  000.672  000.672: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\tagbar\autoload\tagbar\debug.vim
+2416.561  002.046  002.046: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\tagbar\autoload\tagbar\types\uctags.vim
+2419.756  000.621  000.621: sourcing C:\Users\LUCAS\AppData\Local\nvim-data\site\pack\packer\start\tagbar\autoload\tagbar\prototypes\typeinfo.vim
+2612.362  510.947: first screen update
+2612.376  000.014: --- NVIM STARTED ---

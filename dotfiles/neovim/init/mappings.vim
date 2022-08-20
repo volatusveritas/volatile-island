@@ -1,6 +1,10 @@
+" Cycle through buffes
+nmap <silent>[b :bp<CR>
+nmap <silent>]b :bn<CR>
+
 " Create new line without entering insert mode
-nmap <leader>o m`o<Esc>``
-nmap <leader>O m`O<Esc>``
+nmap <leader>o o<Esc>
+nmap <leader>O O<Esc>
 
 " Exit terminal mode with <Esc>
 tnoremap <Esc> <C-\><C-n>
@@ -9,7 +13,7 @@ tnoremap <Esc> <C-\><C-n>
 noremap <A-Right> gt
 noremap <A-Left> gT
 
-nmap <F2> :TagbarToggle<CR>
+nmap <silent> <F2> :TagbarToggle<CR>
 
 nnoremap <silent> <C-n> :NvimTreeToggle<CR>
 nnoremap <silent> <leader>r :NvimTreeRefresh<CR>
