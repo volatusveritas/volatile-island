@@ -1,4 +1,4 @@
-" Cycle through buffes
+" Cycle through buffers
 nmap <silent>[b :bp<CR>
 nmap <silent>]b :bn<CR>
 
@@ -13,10 +13,12 @@ tnoremap <Esc> <C-\><C-n>
 noremap <A-Right> gt
 noremap <A-Left> gT
 
-nmap <silent> <F2> :TagbarToggle<CR>
+nmap <silent> <F2> <Cmd>TagbarToggle<CR>
 
-nnoremap <silent> <C-n> :NvimTreeToggle<CR>
-nnoremap <silent> <leader>r :NvimTreeRefresh<CR>
+nnoremap <silent> ge <Cmd>Explore<CR>
+
+nnoremap <silent> <C-n> <Cmd>NvimTreeToggle<CR>
+nnoremap <silent> <leader>r <Cmd>NvimTreeRefresh<CR>
 
 imap <expr> <Tab> snippy#can_expand_or_advance() ?
     \ '<Plug>(snippy-expand-or-advance)' : '<Tab>'

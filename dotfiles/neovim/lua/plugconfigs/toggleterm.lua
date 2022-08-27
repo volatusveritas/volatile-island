@@ -8,6 +8,9 @@ require("toggleterm").setup {
     end,
     open_mapping = [[<C-\>]],
     shell = "pwsh --nologo",
-    direction = "tab",
+    direction = "float",
     start_in_insert = true,
+    float_opts = {
+        border = "curved",
+    },
 }

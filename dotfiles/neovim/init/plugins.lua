@@ -16,8 +16,9 @@ vim.g.colorizer_auto_filetype = "css,html"
 
 vim.g.vimspector_enable_mappings = "HUMAN"
 
-vim.g.vimwiki_ext2syntax = vim.empty_dict()
 vim.g.vimwiki_auto_header = 1
+vim.g.vimwiki_ext2syntax = vim.empty_dict()
+vim.g.vimwiki_toc_header_level = 2
 
 vim.g.tagbar_autofocus = 1
 

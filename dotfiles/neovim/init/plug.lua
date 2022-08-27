@@ -39,7 +39,6 @@ return require('packer').startup(function(use)
 
     use 'Konfekt/FastFold'
     use 'andweeb/presence.nvim'
-    use 'dcampos/nvim-snippy'
     use 'ggandor/lightspeed.nvim'
     use 'klen/nvim-config-local'
     use 'kyazdani42/nvim-web-devicons'
@@ -51,6 +50,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
     use 'tpope/vim-surround'
+    use 'tpope/vim-vinegar'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
     use 'vimwiki/vimwiki'
@@ -69,6 +69,10 @@ return require('packer').startup(function(use)
     }
     use {
         'neovim/nvim-lspconfig',
+    }
+    use {
+        'volatusveritas/bookmarks.nvim',
+        config = function() require("bookmarks") end,
     }
     use {
         'b3nj5m1n/kommentary',

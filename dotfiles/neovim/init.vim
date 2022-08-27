@@ -9,11 +9,10 @@ source $LOCALAPPDATA/nvim/init/dogit.vim     " Git functionality
 " `plug.lua` is written to (e.g. `:w`)
 function s:UpdatePackerPlugs()
     let choice = confirm(
-        \"plug.lua has been updated. Synchronize Packer?",
+        \"plug.lua has been updated. Synchronize Packer? [Default: Yes]",
         \"&Yes\n&No", 1)
 
     if choice == 1
-        echo "Syncing Packer"
         PackerSync
     endif
 endfunction

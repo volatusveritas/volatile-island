@@ -19,6 +19,7 @@ set cursorline
 set ignorecase
 set termguicolors
 set relativenumber
+set list
 
 " Theme and appearance
 set t_Co=256

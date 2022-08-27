@@ -1,18 +1,21 @@
+-- Global keymaps
+vim.keymap.set("n", vim.g.mapleader.."s", vim.diagnostic.open_float)
+
 local on_attach = function(client, bufnr)
     local bufopts = {noremap=true, silent=true, buffer=bufnr}
-    vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
-    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
-    vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, bufopts)
-    vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, bufopts)
-    vim.keymap.set('n', vim.g.mapleader..'rn', vim.lsp.buf.rename, bufopts)
-    vim.keymap.set('n', vim.g.mapleader..'f', vim.lsp.buf.formatting, bufopts)
-    vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, bufopts)
-    vim.keymap.set('n', 'gr', vim.lsp.buf.references, bufopts)
+    vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
+    vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
+    vim.keymap.set("n", "gD", vim.lsp.buf.declaration, bufopts)
+    vim.keymap.set("n", "gi", vim.lsp.buf.implementation, bufopts)
+    vim.keymap.set("n", vim.g.mapleader.."rn", vim.lsp.buf.rename, bufopts)
+    vim.keymap.set("n", vim.g.mapleader.."f", vim.lsp.buf.formatting, bufopts)
+    vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, bufopts)
+    vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
     vim.keymap.set(
-        'n', vim.g.mapleader..'D', vim.lsp.buf.type_definition, bufopts
+        "n", vim.g.mapleader.."D", vim.lsp.buf.type_definition, bufopts
     )
     vim.keymap.set(
-        'n', vim.g.mapleader..'ca', vim.lsp.buf.code_action, bufopts
+        "n", vim.g.mapleader.."ca", vim.lsp.buf.code_action, bufopts
     )
 end
 
@@ -42,10 +45,17 @@ for _, lang in ipairs(default_langs) do
 end
 
 -- Custom langs setup
+local runtime_lua_path = vim.split(package.path, ";")
+table.insert(runtime_lua_path, "lua/?.lua")
+table.insert(runtime_lua_path, "lua/?/init.lua")
+
 require("lspconfig")["sumneko_lua"].setup(coq.lsp_ensure_capabilities{
     on_attach = on_attach,
     single_file_support = true,
     settings = { Lua = {
+        runtime = {
+            path = runtime_lua_path,
+        },
         diagnostics = {
             globals = {"vim", "minetest"},
         },
@@ -58,10 +68,12 @@ require("lspconfig")["sumneko_lua"].setup(coq.lsp_ensure_capabilities{
         },
         workspace = {
             library = {
-                vim.fn.expand("$VIMRUNTIME/lua"),
-                vim.fn.expand("$VIMRUNTIME/lua/vim/lsp"),
+                vim.api.nvim_get_runtime_file("", true),
                 "C:/Users/LUCAS/Documents/Games/minetest-5.6.0-win64/builtin",
             },
+        },
+        telemetry = {
+            enable = false,
         },
     }}
 })
