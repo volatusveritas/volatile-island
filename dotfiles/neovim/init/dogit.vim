@@ -1,6 +1,10 @@
 " dg stands for Do-Git
 " Command
 nmap dgc :G 
+" Commit
+nmap dgCc :G commit 
+" Commit Command
+nmap <silent> dgCC :G commit<CR>
 " Status
 nmap <silent> dgs :G status<CR>
 " Add

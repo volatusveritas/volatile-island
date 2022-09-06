@@ -29,13 +29,20 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Themes
-    use 'morhetz/gruvbox'
+    use {
+        'morhetz/gruvbox',
+        config = function()
+            vim.g.gruvbox_contrast_dark = "soft"
+        end,
+    }
     use 'navarasu/onedark.nvim'
     use {
         'catppuccin/nvim',
         as = 'catppuccin',
         config = get_config("catppuccin"),
     }
+
+    vim.cmd [[colorscheme catppuccin]]
 
     use 'Konfekt/FastFold'
     use 'andweeb/presence.nvim'
@@ -125,12 +132,8 @@ return require('packer').startup(function(use)
         keys = [[<C-\>]],
     }
     use {
-        'junegunn/fzf',
-        run = function() vim.fn['fzf#install']() end
-    }
-    use {
-        'junegunn/fzf.vim',
-        requires = {'junegunn/fzf'},
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+      requires = { 'nvim-lua/plenary.nvim' }
     }
     use {
         'ms-jpq/coq_nvim',
@@ -140,7 +143,7 @@ return require('packer').startup(function(use)
     use {
         'ms-jpq/coq.artifacts',
         branch = 'artifacts',
-        requires = {'ms-jpq/coq_nvim'},
+        requires = { 'ms-jpq/coq_nvim' },
     }
 
   -- Automatically set up the configuration after cloning packer.nvim

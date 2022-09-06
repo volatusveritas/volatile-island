@@ -1,7 +1,10 @@
 -- Global keymaps
-vim.keymap.set("n", vim.g.mapleader.."s", vim.diagnostic.open_float)
+local opts = { noremap=true, silent=true }
+vim.keymap.set("n", vim.g.mapleader.."e", vim.diagnostic.open_float, opts)
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
 
-local on_attach = function(client, bufnr)
+local on_attach = function(_, bufnr)
     local bufopts = {noremap=true, silent=true, buffer=bufnr}
     vim.keymap.set("n", "K", vim.lsp.buf.hover, bufopts)
     vim.keymap.set("n", "gd", vim.lsp.buf.definition, bufopts)
@@ -26,6 +29,7 @@ local default_langs = {
     "gdscript",
     "html",
     "ltex",
+    "marksman",
     "powershell_es",
     "pyright",
     "tsserver",

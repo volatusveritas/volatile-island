@@ -3,8 +3,8 @@ nmap <silent>[b :bp<CR>
 nmap <silent>]b :bn<CR>
 
 " Create new line without entering insert mode
-nmap <leader>o o<Esc>
-nmap <leader>O O<Esc>
+nmap <Leader>o o<Esc>
+nmap <Leader>O O<Esc>
 
 " Exit terminal mode with <Esc>
 tnoremap <Esc> <C-\><C-n>
@@ -13,12 +13,17 @@ tnoremap <Esc> <C-\><C-n>
 noremap <A-Right> gt
 noremap <A-Left> gT
 
+nnoremap <Leader>ff <Cmd>Telescope find_files<CR>
+nnoremap <Leader>fg <Cmd>Telescope live_grep<CR>
+nnoremap <Leader>fb <Cmd>Telescope buffers<CR>
+nnoremap <Leader>fh <Cmd>Telescope help_tags<CR>
+
 nmap <silent> <F2> <Cmd>TagbarToggle<CR>
 
 nnoremap <silent> ge <Cmd>Explore<CR>
 
 nnoremap <silent> <C-n> <Cmd>NvimTreeToggle<CR>
-nnoremap <silent> <leader>r <Cmd>NvimTreeRefresh<CR>
+nnoremap <silent> <Leader>r <Cmd>NvimTreeRefresh<CR>
 
 imap <expr> <Tab> snippy#can_expand_or_advance() ?
     \ '<Plug>(snippy-expand-or-advance)' : '<Tab>'
@@ -68,8 +73,8 @@ function! s:VolatileZen(absolute)
     endif
 endfunction
 
-nmap <silent> <leader>z :call <SID>VolatileZen(0)<CR>| " Normal Zen
-nmap <silent> <leader>Z :call <SID>VolatileZen(1)<CR>| " Absolute Zen
+nmap <silent> <Leader>z :call <SID>VolatileZen(0)<CR>| " Normal Zen
+nmap <silent> <Leader>Z :call <SID>VolatileZen(1)<CR>| " Absolute Zen
 
 autocmd FileType vimwiki noremap <silent><buffer> glt
     \ :VimwikiToggleListItem<CR>
