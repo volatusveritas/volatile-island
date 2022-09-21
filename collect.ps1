@@ -1,4 +1,12 @@
-# Neovim's Init
+# Reset contents
+Remove-Item -Force -Recurse dotfiles\
+
+# Neovim folder
+New-Item -ItemType Directory dotfiles\neovim\
+# PowerShell folder
+New-Item -ItemType Directory dotfiles\powershell\
+
+# Neovim's init
 Copy-Item -Force -Recurse ~\AppData\Local\nvim\* dotfiles\neovim\
 
 # PowerShell profile
