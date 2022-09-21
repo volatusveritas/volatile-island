@@ -26,3 +26,5 @@ require("catppuccin").setup {
         TSParameter = { style = {} }
     },
 }
+
+vim.cmd("colorscheme catppuccin")

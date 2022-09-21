@@ -6,11 +6,9 @@ require("toggleterm").setup {
             return vim.o.columns * 0.4
         end
     end,
-    open_mapping = [[<C-\>]],
-    shell = "pwsh --nologo",
+    shell = "pwsh -NoLogo -WorkingDirectory .",
     direction = "float",
-    start_in_insert = true,
     float_opts = {
-        border = "curved",
+        border = "rounded",
     },
 }

@@ -26,8 +26,6 @@ function Vlt-Prompt
 
 
 # Single commands
-Set-Location ~\Documents\
-
 Set-Alias dtr tree
 Set-Alias out Out-String
 
