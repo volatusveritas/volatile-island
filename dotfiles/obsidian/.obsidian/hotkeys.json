@@ -1,0 +1,12 @@
+{
+  "app:reload": [],
+  "editor:toggle-source": [],
+  "obsidian-completr:completr-jump-to-next-snippet-placeholder": [
+    {
+      "modifiers": [
+        "Shift"
+      ],
+      "key": "Enter"
+    }
+  ]
+}
