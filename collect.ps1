@@ -1,5 +1,6 @@
 # Reset contents
-Remove-Item -Force -Recurse dotfiles\
+Remove-Item -Force -Recurse dotfiles\neovim\
+Remove-Item -Force -Recurse dotfiles\powershell\
 
 # Neovim folder
 New-Item -ItemType Directory dotfiles\neovim\
