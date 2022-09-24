@@ -1,10 +1,10 @@
 -- BOOTSTRAP
 local packer_bootstrap = false
 
-do  -- Automatically install packer.nvim if absent
+do -- Automatically install packer.nvim if absent
     local install_path = (
-        vim.fn.stdpath('data')..'/site/pack/packer/start/packer.nvim'
-    )
+        vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
+        )
 
     if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
         packer_bootstrap = true
@@ -23,7 +23,6 @@ end
 local function get_plugconfig_str(name)
     return string.format('require("plugconfigs.%s")', name)
 end
-
 
 return require('packer').startup(function(use)
     -- Packer can manage itself
@@ -96,16 +95,14 @@ return require('packer').startup(function(use)
     }
     use {
         'williamboman/mason-lspconfig.nvim',
-        after = {'nvim-lspconfig', 'coq_nvim'},
+        after = { 'nvim-lspconfig', 'coq_nvim' },
         requires = {
             'williamboman/mason.nvim',
             'neovim/nvim-lspconfig'
         },
         config = get_plugconfig_str("lspconfig"),
     }
-    use {
-        'neovim/nvim-lspconfig',
-    }
+    use 'neovim/nvim-lspconfig'
     use {
         'volatusveritas/bookmarks.nvim',
         config = function() require("bookmarks") end,
@@ -183,7 +180,7 @@ return require('packer').startup(function(use)
         requires = 'coq_nvim',
     }
 
-  -- Automatically set up the configuration after cloning packer.nvim
+    -- Automatically set up the configuration after cloning packer.nvim
     if packer_bootstrap then
         require('packer').sync()
     end

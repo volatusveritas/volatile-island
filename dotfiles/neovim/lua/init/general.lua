@@ -9,6 +9,8 @@ vim.o.colorcolumn = "80"
 vim.o.formatoptions = vim.o.formatoptions .. "t"
 vim.o.foldmethod = "indent"
 vim.o.clipboard = "unnamedplus"
+vim.o.showbreak="↪ "
+vim.o.listchars="tab:→ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨"
 
 -- Set/unset settings
 vim.o.list = true
