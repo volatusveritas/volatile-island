@@ -18,3 +18,4 @@ Here one can find software I use, and their purposes.
 | Video Editing, Post-production | [DaVinci Resolve](https://www.blackmagicdesign.com/products/davinciresolve) |
 | Visual Explanations, Graphical Representations | [Xournal++](https://xournalpp.github.io) |
 | 3D Modelling, Animation and Rendering | [Blender](https://www.blender.org) |
+| Gif Capturing/Editing | [ScreenToGif](https://github.com/NickeManarin/ScreenToGif/) |
