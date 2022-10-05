@@ -20,69 +20,9 @@ end
 
 
 
-------------------------------------------------------------------------
---    Load colors from current colorscheme upon colorscheme change    --
-------------------------------------------------------------------------
-
-local feline_volacolors_aug = vim.api.nvim_create_augroup(
-    "FelineVolatileColors",
-    { clear = true }
-)
-
-local function setup_feline_volatile_autocolors()
-    vim.api.nvim_create_autocmd("ColorScheme", {
-        group = feline_volacolors_aug,
-        callback = function()
-            vim.cmd [[highlight FelineVolatileForeground guifg=foreground]]
-            vim.cmd [[highlight FelineVolatileBackground guifg=background]]
-            vim.cmd [[highlight FelineVolatileBlack guifg=Black]]
-            vim.cmd [[highlight FelineVolatileSkyBlue guifg=LightBlue]]
-            vim.cmd [[highlight FelineVolatileCyan guifg=LightCyan]]
-            vim.cmd [[highlight FelineVolatileGreen guifg=LightGreen]]
-            vim.cmd [[highlight FelineVolatileOceanBlue guifg=Blue]]
-            vim.cmd [[highlight FelineVolatileMagenta guifg=LightMagenta]]
-            vim.cmd [[highlight FelineVolatileOrange guifg=Orange]]
-            vim.cmd [[highlight FelineVolatileRed guifg=LightRed]]
-            vim.cmd [[highlight FelineVolatileViolet guifg=Violet]]
-            vim.cmd [[highlight FelineVolatileWhite guifg=White]]
-            vim.cmd [[highlight FelineVolatileYellow guifg=LightYellow]]
-
-            local theme = {
-                fg = get_feline_volatile_color("Foreground"),
-                bg = get_color_code("VertSplit"),
-                black = get_feline_volatile_color("Black"),
-                skyblue = get_feline_volatile_color("SkyBlue"),
-                cyan = get_feline_volatile_color("Cyan"),
-                green = get_feline_volatile_color("Green"),
-                oceanblue = get_feline_volatile_color("Oceanblue"),
-                magenta = get_feline_volatile_color("Magenta"),
-                orange = get_feline_volatile_color("Orange"),
-                red = get_feline_volatile_color("Red"),
-                violet = get_feline_volatile_color("Violet"),
-                white = get_feline_volatile_color("White"),
-                yellow = get_feline_volatile_color("Yellow"),
-            }
-
-            for k, v in pairs(theme) do
-                if #v == 2 then -- #X -> #XXXXXX
-                    theme[k] = "#" .. string.rep(string.sub(v, 2,2), 6)
-                elseif #v == 4 then -- #XYZ -> #XXYYZZ
-                    theme[k] = (
-                        "#"
-                        .. string.rep(string.sub(v, 2,2), 2)
-                        .. string.rep(string.sub(v, 3,3), 2)
-                        .. string.rep(string.sub(v, 4,4), 2)
-                    )
-                end
-            end
-
-            feline.use_theme(theme)
-        end
-    })
-end
-
-setup_feline_volatile_autocolors()
-
+--------------------------------
+--    Components and setup    --
+--------------------------------
 
 local LEFT = 1
 local MIDDLE = 2
@@ -238,3 +178,67 @@ feline.setup {
         },
     },
 }
+
+
+------------------------------------------------------------------------
+--    Load colors from current colorscheme upon colorscheme change    --
+------------------------------------------------------------------------
+
+local feline_volacolors_aug = vim.api.nvim_create_augroup(
+    "FelineVolatileColors",
+    { clear = true }
+)
+
+local function setup_feline_volatile_autocolors()
+    vim.cmd [[highlight FelineVolatileForeground guifg=foreground]]
+    vim.cmd [[highlight FelineVolatileBackground guifg=background]]
+    vim.cmd [[highlight FelineVolatileBlack guifg=Black]]
+    vim.cmd [[highlight FelineVolatileSkyBlue guifg=LightBlue]]
+    vim.cmd [[highlight FelineVolatileCyan guifg=LightCyan]]
+    vim.cmd [[highlight FelineVolatileGreen guifg=LightGreen]]
+    vim.cmd [[highlight FelineVolatileOceanBlue guifg=Blue]]
+    vim.cmd [[highlight FelineVolatileMagenta guifg=LightMagenta]]
+    vim.cmd [[highlight FelineVolatileOrange guifg=Orange]]
+    vim.cmd [[highlight FelineVolatileRed guifg=LightRed]]
+    vim.cmd [[highlight FelineVolatileViolet guifg=Violet]]
+    vim.cmd [[highlight FelineVolatileWhite guifg=White]]
+    vim.cmd [[highlight FelineVolatileYellow guifg=LightYellow]]
+
+    local theme = {
+        fg = get_feline_volatile_color("Foreground"),
+        bg = get_color_code("VertSplit"),
+        black = get_feline_volatile_color("Black"),
+        skyblue = get_feline_volatile_color("SkyBlue"),
+        cyan = get_feline_volatile_color("Cyan"),
+        green = get_feline_volatile_color("Green"),
+        oceanblue = get_feline_volatile_color("Oceanblue"),
+        magenta = get_feline_volatile_color("Magenta"),
+        orange = get_feline_volatile_color("Orange"),
+        red = get_feline_volatile_color("Red"),
+        violet = get_feline_volatile_color("Violet"),
+        white = get_feline_volatile_color("White"),
+        yellow = get_feline_volatile_color("Yellow"),
+    }
+
+    for k, v in pairs(theme) do
+        if #v == 2 then -- #X -> #XXXXXX
+            theme[k] = "#" .. string.rep(string.sub(v, 2,2), 6)
+        elseif #v == 4 then -- #XYZ -> #XXYYZZ
+            theme[k] = (
+                "#"
+                .. string.rep(string.sub(v, 2,2), 2)
+                .. string.rep(string.sub(v, 3,3), 2)
+                .. string.rep(string.sub(v, 4,4), 2)
+            )
+        end
+    end
+
+    feline.use_theme(theme)
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+    group = feline_volacolors_aug,
+    callback = setup_feline_volatile_autocolors
+})
+
+setup_feline_volatile_autocolors()

@@ -65,7 +65,11 @@ return require('packer').startup(function(use)
             vim.g.indent_blankline_show_current_context = 1
         end,
     }
-    use 'nanozuki/tabby.nvim'
+    use {
+        'nanozuki/tabby.nvim',
+        config = function() require("tabby.tabline")
+        end,
+    }
     use 'nvim-lua/plenary.nvim'
     use 'p00f/nvim-ts-rainbow'
     use {
@@ -79,7 +83,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-repeat'
     use 'tpope/vim-surround'
     use 'tpope/vim-vinegar'
-    use 'xiyaowong/telescope-emoji.nvim'
+    use 'habamax/vim-godot'
     use {
         'feline-nvim/feline.nvim',
         config = get_plugconfig_str("feline")
@@ -105,7 +109,7 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use {
         'volatusveritas/bookmarks.nvim',
-        config = function() require("bookmarks") end,
+        config = function() require("bookmarks").setup() end,
     }
     use {
         'b3nj5m1n/kommentary',
@@ -157,19 +161,21 @@ return require('packer').startup(function(use)
         config = get_plugconfig_str("toggleterm"),
     }
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        after = "telescope-emoji.nvim",
-        requires = 'nvim-lua/plenary.nvim',
-        config = function()
-            require("telescope").load_extension("emoji")
-        end,
-    }
-    use {
         'ms-jpq/coq_nvim',
         branch = 'coq',
         commit = '84ec5faf2aaf49819e626f64dd94f4e71cf575bc',
         config = function()
-            vim.g.coq_settings = { auto_start = "shut-up" }
+            vim.g.coq_settings = {
+                auto_start = "shut-up",
+                display = {
+                    pum = {
+                        fast_close = false,
+                    },
+                    preview = {
+                        border = "rounded"
+                    },
+                },
+            }
 
             require("coq")
         end
@@ -178,6 +184,29 @@ return require('packer').startup(function(use)
         'ms-jpq/coq.artifacts',
         branch = 'artifacts',
         requires = 'coq_nvim',
+    }
+    use {
+        'nvim-telescope/telescope.nvim',
+        tag = '0.1.0',
+        requires = { { 'nvim-lua/plenary.nvim' } },
+    }
+    use {
+        'xiyaowong/telescope-emoji.nvim',
+        requires = { { 'nvim-telescope/telescope.nvim' } },
+        config = function()
+            require("telescope").load_extension("emoji")
+        end,
+    }
+    use {
+        'rcarriga/nvim-notify',
+        config = function()
+            vim.notify = require("notify")
+        end,
+    }
+    use {
+        'stevearc/overseer.nvim',
+        requires = { { 'stevearc/dressing.nvim' } },
+        config = get_plugconfig_str("overseer"),
     }
 
     -- Automatically set up the configuration after cloning packer.nvim

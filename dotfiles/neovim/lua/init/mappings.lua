@@ -19,11 +19,19 @@ vim.keymap.set("n", "<A-Left>", "<Cmd>tabprevious<CR>", {})
 vim.keymap.set("", "<C-z>", "<Undo>")
 
 
+-- Overseer (Seer)
+vim.keymap.set("n", "<Leader>sr", "<Cmd>OverseerRun<CR>")
+vim.keymap.set("n", "<Leader>st", "<Cmd>OverseerToggle<CR>")
+
+
 -- Telescope
+vim.keymap.set("n", "<Leader>f<Leader>f", "<Cmd>Telescope<CR>")
 vim.keymap.set("n", "<Leader>ff", "<Cmd>Telescope find_files<CR>")
 vim.keymap.set("n", "<Leader>fg", "<Cmd>Telescope live_grep<CR>")
 vim.keymap.set("n", "<Leader>fb", "<Cmd>Telescope buffers<CR>")
 vim.keymap.set("n", "<Leader>fh", "<Cmd>Telescope help_tags<CR>")
+
+vim.keymap.set("n", "<Leader>fe", "<Cmd>Telescope emoji<CR>")
 
 
 -- Tagbar
@@ -62,10 +70,10 @@ vim.keymap.set("n", "dgS", "<Cmd>G status<CR>", {})
 
 
 -- Toggleterm
-vim.keymap.set("n", [[<C-\>f]], "<Cmd>ToggleTerm direction=float<CR>", opts_silent)
-vim.keymap.set("n", [[<C-\>x]], "<Cmd>ToggleTerm direction=horizontal<CR>", opts_silent)
-vim.keymap.set("n", [[<C-\>v]], "<Cmd>ToggleTerm direction=vertical<CR>", opts_silent)
-vim.keymap.set("n", [[<C-\>t]], "<Cmd>ToggleTerm direction=tab<CR>", opts_silent)
+vim.keymap.set("n", "<C-t>f", "<Cmd>ToggleTerm direction=float<CR>", opts_silent)
+vim.keymap.set("n", "<C-t>x", "<Cmd>ToggleTerm direction=horizontal<CR>", opts_silent)
+vim.keymap.set("n", "<C-t>v", "<Cmd>ToggleTerm direction=vertical<CR>", opts_silent)
+vim.keymap.set("n", "<C-t>t", "<Cmd>ToggleTerm direction=tab<CR>", opts_silent)
 
 
 -- (Zen Mode)

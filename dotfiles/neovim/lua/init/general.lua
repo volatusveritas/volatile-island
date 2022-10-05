@@ -11,6 +11,7 @@ vim.o.foldmethod = "indent"
 vim.o.clipboard = "unnamedplus"
 vim.o.showbreak="↪ "
 vim.o.listchars="tab:→ ,nbsp:␣,trail:•,extends:⟩,precedes:⟨"
+vim.o.foldcolumn="auto"
 
 -- Set/unset settings
 vim.o.list = true
