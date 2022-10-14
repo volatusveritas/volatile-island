@@ -37,6 +37,3 @@ require("neorg").setup {
         }
     }
 }
-
-vim.keymap.set("n", "<Leader>tv", "<Cmd>Neorg gtd views<CR>")
-vim.keymap.set("n", "<Leader>tc", "<Cmd>Neorg gtd capture<CR>")

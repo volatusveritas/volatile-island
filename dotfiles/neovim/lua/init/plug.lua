@@ -4,7 +4,7 @@ local packer_bootstrap = false
 do -- Automatically install packer.nvim if absent
     local install_path = (
         vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-        )
+    )
 
     if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
         packer_bootstrap = true
@@ -65,17 +65,26 @@ return require('packer').startup(function(use)
             vim.g.indent_blankline_show_current_context = 1
         end,
     }
-    use {
-        'nanozuki/tabby.nvim',
-        config = function() require("tabby.tabline")
-        end,
-    }
     use 'nvim-lua/plenary.nvim'
     use 'p00f/nvim-ts-rainbow'
     use {
         'preservim/tagbar',
         config = function()
             vim.g.tagbar_autofocus = 1
+        end,
+    }
+    use {
+        'matbme/JABS.nvim',
+        config = function()
+            require("jabs").setup()
+        end,
+    }
+    use {
+        'natecraddock/workspaces.nvim',
+        requires = 'nvim-telescope/telescope.nvim',
+        config = function()
+            require("workspaces").setup()
+            require("telescope").load_extension("workspaces")
         end,
     }
     use 'takac/vim-hardtime'
@@ -186,13 +195,22 @@ return require('packer').startup(function(use)
         requires = 'coq_nvim',
     }
     use {
+        'ms-jpq/coq.thirdparty',
+        requires = 'coq_nvim',
+        config = function()
+            require("coq_3p") {
+                { src = "nvimlua", shot_name = "nLUA", conf_only = true },
+            }
+        end,
+    }
+    use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.0',
-        requires = { { 'nvim-lua/plenary.nvim' } },
+        requires = 'nvim-lua/plenary.nvim',
     }
     use {
         'xiyaowong/telescope-emoji.nvim',
-        requires = { { 'nvim-telescope/telescope.nvim' } },
+        requires = 'nvim-telescope/telescope.nvim',
         config = function()
             require("telescope").load_extension("emoji")
         end,
@@ -205,12 +223,19 @@ return require('packer').startup(function(use)
     }
     use {
         'stevearc/overseer.nvim',
-        requires = { { 'stevearc/dressing.nvim' } },
+        requires = 'stevearc/dressing.nvim',
         config = get_plugconfig_str("overseer"),
     }
 
     -- Automatically set up the configuration after cloning packer.nvim
     if packer_bootstrap then
+        -- Things to do:
+        --- [ ] Sync Packer (+compile and all the other stuff)
+        --- [ ] Update/install all Treesitter parsers
+        --- [ ] Update/install all LSP servers
+        --- [ ] nvim_echo() to warn about the boostrap
         require('packer').sync()
     end
 end)
+
+-- vim:foldlevel=2:

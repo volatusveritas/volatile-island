@@ -1,3 +1,5 @@
-require("init.plug")      -- plugin loading | $LOCALAPPDATA/nvim/lua/init/plug.lua
-require("init.general")   -- general settings (options) | $LOCALAPPDATA/nvim/lua/init/general.lua
-require("init.mappings")  -- mappings | $LOCALAPPDATA/nvim/lua/init/mappings.lua
+require("init.plug")      -- plugin loading  | init/plug.lua
+require("init.general")   -- general options | init/general.lua
+require("init.mappings")  -- mappings        | init/mappings.lua
+
+require("init.folding")  -- folding specials | init/folding.lua

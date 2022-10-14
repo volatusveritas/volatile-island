@@ -4,9 +4,10 @@ return {
         return {
             cmd = { "python" },
             args = {
-                "-m", "unittest", "discover", "-v",
-                "-s", "tests/",
-                "-p", "*",
+                "-m", "unittest",
+                "discover",
+                "-v",
+                "-s", "tests/"
             },
             components = {
                 "on_complete_notify",
