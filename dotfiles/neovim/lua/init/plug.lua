@@ -56,6 +56,7 @@ return require('packer').startup(function(use)
             vim.g.presence_main_image = "neovim"
         end,
     }
+    use 'nvim-lua/plenary.nvim'
     use 'ggandor/lightspeed.nvim'
     use 'kyazdani42/nvim-web-devicons'
     use {
@@ -65,7 +66,6 @@ return require('packer').startup(function(use)
             vim.g.indent_blankline_show_current_context = 1
         end,
     }
-    use 'nvim-lua/plenary.nvim'
     use 'p00f/nvim-ts-rainbow'
     use {
         'preservim/tagbar',
@@ -87,11 +87,17 @@ return require('packer').startup(function(use)
             require("telescope").load_extension("workspaces")
         end,
     }
-    use 'takac/vim-hardtime'
+    use {
+        'folke/persistence.nvim',
+        event = "BufReadPre",
+        module = "persistence",
+        config = function()
+            require("persistence").setup()
+        end,
+    }
     use 'tpope/vim-fugitive'
     use 'tpope/vim-repeat'
     use 'tpope/vim-surround'
-    use 'tpope/vim-vinegar'
     use 'habamax/vim-godot'
     use {
         'feline-nvim/feline.nvim',
@@ -138,7 +144,7 @@ return require('packer').startup(function(use)
             require("colorizer").setup {}
         end,
     }
-    use {
+    use { -- See if I can ditch this for telescope's todolists
         'folke/todo-comments.nvim',
         config = function() require("todo-comments").setup {} end,
     }
@@ -156,7 +162,22 @@ return require('packer').startup(function(use)
         'kyazdani42/nvim-tree.lua',
         config = function()
             require("nvim-tree").setup {
-                renderer = { indent_markers = { enable = true } }
+                hijack_netrw = true,
+                hijack_directories = {
+                    enable = true,
+                },
+                sync_root_with_cwd = true,
+                renderer = { indent_markers = { enable = true } },
+                view = {
+                    mappings = {
+                        list = {
+                            {
+                                key = "<CR>",
+                                action = "edit_in_place"
+                            }
+                        }
+                    }
+                }
             }
         end
     }

@@ -106,7 +106,7 @@ local prov_file_status = {
     -- Updated Symbol: 
     provider = function()
         if vim.o.modified then
-            return "洛"
+            return "●"
         else
             return ""
         end

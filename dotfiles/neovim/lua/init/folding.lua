@@ -1,7 +1,15 @@
 local INDICATOR_STR = "•"
 local ANCHOR_STR = "❯❯"
 
-function VolatileFolding()
+local function get_matching(opening)
+    if opening == "(" then return ")"
+    elseif opening == "[" then return "]"
+    elseif opening == "{" then return "}"
+    elseif opening == "<" then return ">"
+    else return "" end
+end
+
+function NoMatchFolding()
     local fold_level_indicator = string.gsub(
         vim.v.folddashes,
         "-", INDICATOR_STR
@@ -13,7 +21,7 @@ function VolatileFolding()
     )
 
     return string.format(
-        "  %s (+%s) %s %s",
+        " %s (+%s) %s %s",
         fold_level_indicator,
         fold_size,
         first_line,
@@ -21,6 +29,31 @@ function VolatileFolding()
     )
 end
 
-vim.o.foldtext = "v:lua.VolatileFolding()"
+function BetterFoldtext()
+    local root_line = string.gsub(
+        vim.fn.getline(vim.v.foldstart),
+        "\t", string.rep(" ", vim.o.tabstop)
+    )
+
+    local last_line = string.gsub(
+        vim.fn.getline(vim.v.foldend),
+        "^%s*(.-)%s*$", "%1"
+    )
+
+    if (
+        string.sub(last_line, 1,1) == get_matching(
+            string.sub(root_line, #root_line)
+        )
+    ) then
+        return root_line .. " ... " .. last_line
+    else
+        return NoMatchFolding()
+    end
+end
+
+vim.o.foldmethod = "expr"
+vim.o.foldexpr = "nvim_treesitter#foldexpr()"
+vim.o.foldtext = "v:lua.BetterFoldtext()"
 vim.o.foldmethod = "indent"
 vim.o.foldlevel = 1
+vim.o.foldnestmax = 3

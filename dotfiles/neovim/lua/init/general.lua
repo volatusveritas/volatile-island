@@ -1,5 +1,4 @@
 -- Value options
-vim.g.mapleader = ","
 vim.o.tabstop = 4
 vim.o.textwidth = 79
 vim.o.scrolloff = 10
@@ -8,6 +7,11 @@ vim.o.colorcolumn = "80"
 vim.o.formatoptions = vim.o.formatoptions .. "t"
 vim.o.clipboard = "unnamedplus"
 vim.o.showbreak = "↪ "
+
+vim.g.mapleader = ","
+
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
 
 vim.o.fillchars = table.concat({
     "fold: ",

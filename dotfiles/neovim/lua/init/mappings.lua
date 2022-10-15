@@ -26,7 +26,23 @@ local prefixes = {
     fugitive = "dg",
     toggleterm = "<C-t>",
     workspaces = "<Leader>w",
+    persistence = "<Leader>q",
 }
+
+
+-- Persistence
+vim.keymap.set(
+    "n", prefixes.persistence .. "s",
+    [[<Cmd>lua require("persistence").load()<CR>]]
+)
+vim.keymap.set(
+    "n", prefixes.persistence .. "l",
+    [[<Cmd>lua require("persistence").load({ last = true })<CR>]]
+)
+vim.keymap.set(
+    "n", prefixes.persistence .. "d",
+    [[<Cmd>lua require("persistence").stop()<CR>]]
+)
 
 
 -- Workspaces.nvim
@@ -68,13 +84,11 @@ vim.keymap.set("n", prefixes.telescope .. "w", "<Cmd>Telescope workspaces<CR>")
 vim.keymap.set("n", "<F2>", "<Cmd>TagbarToggle<CR>", opts_silent)
 
 
--- Vinegar
-vim.keymap.set("n", "ge", "<Cmd>Explore<CR>", opts_silent)
-
-
--- NvimTree
-vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeFocus<CR>", opts_silent)
-vim.keymap.set("n", "<Leader>r", "<Cmd>NvimTreeRefresh<CR>", opts_silent)
+-- Nvim-tree
+vim.keymap.set("n", "<C-n>", "<Cmd>NvimTreeFocus<CR>")
+vim.keymap.set("n", "ge", function()
+    require("nvim-tree").open_replacing_current_buffer()
+end)
 
 
 -- Fugitive
