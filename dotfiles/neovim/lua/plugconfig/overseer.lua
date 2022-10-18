@@ -1,6 +1,6 @@
-require("overseer").setup({
+require("overseer").setup {
     templates = {
         "builtin",
         "python",
     },
-})
+}

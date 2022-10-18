@@ -3,7 +3,6 @@ local vi_mode = require("feline.providers.vi_mode")
 local cursor = require("feline.providers.cursor")
 
 
-
 -------------------------------
 --    Auxiliary functions    --
 -------------------------------
@@ -17,7 +16,6 @@ end
 local function get_feline_volatile_color(name)
     return get_color_code("FelineVolatile" .. name)
 end
-
 
 
 --------------------------------
