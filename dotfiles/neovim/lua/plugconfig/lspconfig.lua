@@ -91,3 +91,14 @@ require("lspconfig")["pyright"].setup(coq.lsp_ensure_capabilities{
         )
     end,
 })
+
+require("lspconfig")["gdscript"].setup(coq.lsp_ensure_capabilities{
+    on_attach = on_attach,
+    single_file_support = true,
+    root_dir = function(filename, bufnr)
+        return vim.fs.dirname(
+            vim.fs.find({ ".git", "project.godot" }, { upward = true })[1]
+        )
+    end,
+    cmd = {},
+})

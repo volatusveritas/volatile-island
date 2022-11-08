@@ -1,7 +1,8 @@
-require("init.general")   -- general options | init/general.lua
-require("init.plug")      -- plugin loading  | init/plug.lua
-require("init.mappings")  -- mappings        | init/mappings.lua
+require("init.general")  -- general options | init/general.lua
+require("init.plug")     -- plugin loading  | init/plug.lua
+require("init.mappings") -- mappings        | init/mappings.lua
+require("init.volavim")  -- editor tools    | init/volavim.lua
 
-require("init.folding")  -- folding specials | init/folding.lua
+require("init.folding") -- folding specials | init/folding.lua
 
-vim.cmd("colorscheme catppuccin")
+-- vim.cmd("colorscheme nord")

@@ -29,20 +29,12 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     -- Themes
-    use ( plugin "onedark" )
-    use ( plugin "gruvbox" )
     use ( plugin "catppuccin" )
+    use ( plugin "gruvbox" )
+    use ( plugin "nord" )
+    use ( plugin "onedark" )
+    use ( plugin "onehalf" )
 
-    use 'ggandor/lightspeed.nvim'
-    use 'habamax/vim-godot'
-    use 'kyazdani42/nvim-web-devicons'
-    use 'neovim/nvim-lspconfig'
-    use 'nvim-lua/plenary.nvim'
-    use 'tpope/vim-fugitive'
-    use 'tpope/vim-repeat'
-    use 'tpope/vim-surround'
-
-    use ( plugin "nvim-ts-rainbow" )
     use ( plugin "JABS" )
     use ( plugin "bookmarks" )
     use ( plugin "colorizer" )
@@ -52,11 +44,16 @@ return require('packer').startup(function(use)
     use ( plugin "feline" )
     use ( plugin "indent-blankline" )
     use ( plugin "kommentary" )
+    use ( plugin "lightspeed" )
     use ( plugin "mason" )
     use ( plugin "mason-lspconfig" )
     use ( plugin "neorg" )
+    use ( plugin "nvim-lspconfig" )
+    use ( plugin "nvim-notify" )
     use ( plugin "nvim-tree" )
     use ( plugin "nvim-treesitter" )
+    use ( plugin "nvim-ts-rainbow" )
+    use ( plugin "nvim-web-devicons" )
     use ( plugin "overseer" )
     use ( plugin "persistence" )
     use ( plugin "presence" )
@@ -66,9 +63,15 @@ return require('packer').startup(function(use)
     use ( plugin "todo-comments" )
     use ( plugin "toggleterm" )
     use ( plugin "twilight" )
+    use ( plugin "vim-godot" )
+    use ( plugin "volatile-org" )
     use ( plugin "which-key" )
     use ( plugin "workspaces" )
     use ( plugin "zen-mode" )
+    use ( plugin 'plenary-nvim' )
+    use ( plugin 'vim-fugitive' )
+    use ( plugin 'vim-repeat' )
+    use ( plugin 'vim-surround' )
 
     -- Automatically set up the configuration after cloning packer.nvim
     if packer_bootstrap then

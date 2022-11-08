@@ -7,6 +7,7 @@ vim.o.colorcolumn = "80"
 vim.o.formatoptions = vim.o.formatoptions .. "t"
 vim.o.clipboard = "unnamedplus"
 vim.o.showbreak = "↪ "
+vim.o.mouse = ""
 
 vim.g.mapleader = ","
 

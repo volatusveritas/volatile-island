@@ -26,20 +26,40 @@ local prefixes = {
     fugitive = "dg",
     toggleterm = "<C-t>",
     workspaces = "<Leader>w",
-    persistence = "<Leader>q",
+    persistence = "<Leader>s",
+    editor_tools = "<Leader>n",
 }
 
 
--- Persistence
+-- Editor Tools (Volavim)
 vim.keymap.set(
-    "n", prefixes.persistence .. "s",
-    [[<Cmd>lua require("persistence").load()<CR>]]
+    "n", prefixes.editor_tools .. "c",
+    require("init.volavim").editor_config
 )
 vim.keymap.set(
+    "n", prefixes.editor_tools .. "pc",
+    require("init.volavim").editor_plugin_config
+)
+vim.keymap.set(
+    "n", prefixes.editor_tools .. "pp",
+    require("init.volavim").editor_plugin_plugconfig
+)
+vim.keymap.set(
+    "n", prefixes.editor_tools .. "pn",
+    require("init.volavim").editor_plugin_new
+)
+
+
+-- Persistence
+vim.keymap.set( -- "current dir"
+    "n", prefixes.persistence .. "c",
+    [[<Cmd>lua require("persistence")config.load()<CR>]]
+)
+vim.keymap.set( -- "last session"
     "n", prefixes.persistence .. "l",
     [[<Cmd>lua require("persistence").load({ last = true })<CR>]]
 )
-vim.keymap.set(
+vim.keymap.set( -- "delete persistence"
     "n", prefixes.persistence .. "d",
     [[<Cmd>lua require("persistence").stop()<CR>]]
 )
