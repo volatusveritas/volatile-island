@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd ~
+cd C:/anvildir/GitHub/HRDN/hrdn/config
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,20 +13,11 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +7 neorg/workspaces/home/index.norg
-badd +1 neorg/workspaces/home/krahit.norg
+badd +21 datastores.js
+badd +133 C:/anvildir/GitHub/HRDN/.gitignore
 argglobal
 %argdel
-edit neorg/workspaces/home/krahit.norg
-argglobal
-balt neorg/workspaces/home/index.norg
-let s:l = 58 - ((37 * winheight(0) + 24) / 48)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 58
-normal! 0
-lcd ~/neorg/workspaces/home
+$argadd datastores.js
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf

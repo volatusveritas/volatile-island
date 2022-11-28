@@ -3,7 +3,7 @@ let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-
 let v:this_session=expand("<sfile>:p")
 silent only
 silent tabonly
-cd C:/anvildir/GitHub/volt-mctg
+cd C:/anvildir/GitHub/HRDN/hrdn
 if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
   let s:wipebuf = bufnr('%')
 endif
@@ -13,12 +13,12 @@ if &shortmess =~ 'A'
 else
   set shortmess=aoO
 endif
-badd +137 ./voltmctg/__main__.py
-badd +76 voltmctg/markov_chain_text_generator.py
+badd +20 ./config/datastores.js
+badd +1 C:/anvildir/GitHub/HRDN/hrdn/config/env/production.js
 argglobal
 %argdel
-$argadd ./voltmctg/__main__.py
-edit ./voltmctg/__main__.py
+$argadd ./config/datastores.js
+edit ./config/datastores.js
 let s:save_splitbelow = &splitbelow
 let s:save_splitright = &splitright
 set splitbelow splitright
@@ -35,32 +35,30 @@ set winminheight=0
 set winheight=1
 set winminwidth=0
 set winwidth=1
-exe 'vert 1resize ' . ((&columns * 96 + 97) / 194)
-exe 'vert 2resize ' . ((&columns * 97 + 97) / 194)
+wincmd =
 argglobal
-balt voltmctg/markov_chain_text_generator.py
-let s:l = 137 - ((79 * winheight(0) + 24) / 48)
+balt C:/anvildir/GitHub/HRDN/hrdn/config/env/production.js
+let s:l = 20 - ((19 * winheight(0) + 24) / 48)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 137
+keepjumps 20
+normal! 019|
+wincmd w
+argglobal
+if bufexists(fnamemodify("C:/anvildir/GitHub/HRDN/hrdn/config/env/production.js", ":p")) | buffer C:/anvildir/GitHub/HRDN/hrdn/config/env/production.js | else | edit C:/anvildir/GitHub/HRDN/hrdn/config/env/production.js | endif
+if &buftype ==# 'terminal'
+  silent file C:/anvildir/GitHub/HRDN/hrdn/config/env/production.js
+endif
+balt ./config/datastores.js
+let s:l = 1 - ((0 * winheight(0) + 24) / 48)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
 normal! 0
 wincmd w
-argglobal
-if bufexists(fnamemodify("voltmctg/markov_chain_text_generator.py", ":p")) | buffer voltmctg/markov_chain_text_generator.py | else | edit voltmctg/markov_chain_text_generator.py | endif
-if &buftype ==# 'terminal'
-  silent file voltmctg/markov_chain_text_generator.py
-endif
-balt ./voltmctg/__main__.py
-let s:l = 76 - ((75 * winheight(0) + 24) / 48)
-if s:l < 1 | let s:l = 1 | endif
-keepjumps exe s:l
-normal! zt
-keepjumps 76
-normal! 036|
-wincmd w
-exe 'vert 1resize ' . ((&columns * 96 + 97) / 194)
-exe 'vert 2resize ' . ((&columns * 97 + 97) / 194)
+wincmd =
 tabnext 1
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0 && getbufvar(s:wipebuf, '&buftype') isnot# 'terminal'
   silent exe 'bwipe ' . s:wipebuf
@@ -76,6 +74,7 @@ if filereadable(s:sx)
 endif
 let &g:so = s:so_save | let &g:siso = s:siso_save
 set hlsearch
+nohlsearch
 doautoall SessionLoadPost
 unlet SessionLoad
 " vim: set ft=vim :
