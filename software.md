@@ -30,3 +30,4 @@ Specifics for programming:
 | Insane audio library | [Miniaudio](https://miniaud.io/index.html) |
 | Debuggers | [RemedyBG](https://remedybg.handmade.network/), [RAD Debugger](https://github.com/EpicGamesExt/raddebugger) |
 | Build system/runner | [Raven](https://github.com/volatusveritas/raven) |
+| Hex file viewing/editing | [ImHex](https://github.com/WerWolv/ImHex) |
