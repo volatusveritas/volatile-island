@@ -47,8 +47,9 @@ Things I use. Updated.
 If a language is not in this list I either haven't used or dislike it.
 
 1. [Odin](https://odin-lang.org/)
-2. [C](https://en.wikipedia.org/wiki/C_(programming_language))
-3. [Python](https://www.python.org/)
+2. [Lua](https://www.lua.org/)
+3. [C](https://en.wikipedia.org/wiki/C_(programming_language))
+4. [Python](https://www.python.org/)
 
 ## Cool libraries
 
