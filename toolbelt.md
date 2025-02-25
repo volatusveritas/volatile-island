@@ -1,6 +1,6 @@
 # Tool Belt
 
-Things I use. Updated.
+Things I use. Updated whenever life allows me to recall it exists.
 
 ## Software
 
@@ -55,6 +55,6 @@ If a language is not in this list I either haven't used or dislike it.
 
 | Purpose | Library |
 | :-----: | :-----: |
-| Networking library with reliable UDP communication | [ENet](http://enet.bespin.org/index.html) |
-| Audio library | [Miniaudio](https://miniaud.io/index.html) |
-| Networking library with rollback for low latency peer-to-peer games | [GGPO](https://www.ggpo.net/) |
+| Networking with reliable UDP communication | [ENet](http://enet.bespin.org/index.html) |
+| Audio playback and capture | [Miniaudio](https://miniaud.io/index.html) |
+| Networking with rollback for low latency peer-to-peer games | [GGPO](https://www.ggpo.net/) |
