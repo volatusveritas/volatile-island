@@ -17,8 +17,8 @@ Things I use. Updated whenever life allows me to recall it exists.
 | Audio editing and recording | [Audacity](https://www.audacityteam.org) |
 | Music production, sound design, DAW | [FL Studio](https://www.image-line.com/fl-studio/), [Reaper](https://www.reaper.fm/) |
 | Video editing, post-production | [Lightworks](https://lwks.com/), [Adobe Premiere](https://www.adobe.com/products/premiere.html), [After Effects](https://www.adobe.com/products/aftereffects.html) |
-| Image and video effects | [Mosh-Pro](https://moshpro.app/) |
-| 3D modelling, animation and rendering | [Blender](https://www.blender.org) |
+| Image, video effects | [Mosh-Pro](https://moshpro.app/) |
+| 3D modelling, animation, rendering | [Blender](https://www.blender.org) |
 | Video GIF capturing | [ScreenToGif](https://github.com/NickeManarin/ScreenToGif/) |
 | Shell | [Nushell](http://www.nushell.sh) |
 | Terminal emulator | [Cmder](https://cmder.app/) |
@@ -29,8 +29,8 @@ Things I use. Updated whenever life allows me to recall it exists.
 | Runtime executable inspection | [Cheat Engine](https://www.cheatengine.org/) |
 | Chiptune sound effect generation | [ChipTone](https://sfbgames.itch.io/chiptone), [sfxr](https://www.drpetter.se/) |
 | Reverse engineering | [Cutter](https://cutter.re/) |
-| Debuggers | [RemedyBG](https://remedybg.handmade.network/), [RAD Debugger](https://github.com/EpicGamesExt/raddebugger) |
-| Build system/runner | [Raven](https://github.com/volatusveritas/raven) |
+| Debugging | [RemedyBG](https://remedybg.handmade.network/), [RAD Debugger](https://github.com/EpicGamesExt/raddebugger) |
+| Build system, runner | [Raven](https://github.com/volatusveritas/raven) |
 | Hex file viewing/editing | [ImHex](https://github.com/WerWolv/ImHex) |
 | Finding files | [fd](https://github.com/sharkdp/fd) |
 | Image viewer | [Honeyview](https://en.bandisoft.com/honeyview/) |
@@ -58,3 +58,4 @@ If a language is not in this list I either haven't used or dislike it.
 | Networking with reliable UDP communication | [ENet](http://enet.bespin.org/index.html) |
 | Audio playback and capture | [Miniaudio](https://miniaud.io/index.html) |
 | Networking with rollback for low latency peer-to-peer games | [GGPO](https://www.ggpo.net/) |
+| Immediate mode UI layout | [Clay](https://www.nicbarker.com/clay) |
