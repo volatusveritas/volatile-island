@@ -10,3 +10,4 @@ Articles and other written material I like and want to share.
 | [Notes on Programming in C](https://doc.cat-v.org/bell_labs/pikestyle) by Rob Pike | Some good rules for programming, most of which I tend to follow |
 | [HTML Hell](https://www.htmhell.dev/) | Bad HTML practices and tips on how to avoid them |
 | [Ithkuil](https://www.ithkuil.net/) | An interesting constructed language experiment |
+| [Operating Systems: Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/) by Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau | A good introduction to how operating systems work |
