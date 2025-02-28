@@ -1,6 +1,6 @@
 # Tool Belt
 
-Things I use. Updated whenever life allows me to recall it exists.
+Things I use.
 
 ## Software
 
