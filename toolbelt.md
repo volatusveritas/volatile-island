@@ -41,6 +41,7 @@ Things I use.
 | Browser | [Thorium](https://thorium.rocks/), [Arc](https://arc.net/) |
 | [MUD](https://en.wikipedia.org/wiki/Multi-user_dungeon) client | [TinTin++](https://tintin.mudhalla.net/) |
 | Disk space analyzer | [WizTree](https://diskanalyzer.com/) |
+| File explorer | [File Pilot](https://filepilot.tech/) |
 
 ## Programming languages (ranked)
 
